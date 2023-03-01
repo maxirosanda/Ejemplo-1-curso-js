@@ -31,7 +31,7 @@ const view = (id = 0) =>{
   let question = document.querySelector(".quiz h3")
   let quiz = quizs[id]
   question.innerText = `${quiz.question}`
-  answer.innerHTML = `<input type="hidden" id="${id}>"`
+  answer.innerHTML = `<input type="hidden" name"id" value="${id}">`
   for(const option in quiz.options){
     let label = document.createElement("label")
     label.innerHTML = `<input type="radio" name="answer" value="${quiz.options[option]}"> ${quiz.options[option]}`
@@ -45,7 +45,7 @@ const next = () => {
   const next = document.getElementById("next")
   next.addEventListener("submit",(e)=>{
     e.preventDefault()
-    let answer = e.target[0].
+    let answer = e.target
     console.log(answer)
   })
 }
