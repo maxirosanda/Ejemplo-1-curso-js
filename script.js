@@ -1,7 +1,7 @@
 const quizs = [
   {
     id:1,
-    questions:"esta es una pregunta para la quiz?",
+    question:"esta es una pregunta para la quiz?",
     options:{
       option1:"esta es la respuesta 1?",
       option2:"esta es la respuesta 2?",
@@ -13,7 +13,7 @@ const quizs = [
   },
   {
     id:2,
-    questions:"esta es una pregunta para la quiz?",
+    question:"esta es una pregunta para la quiz?",
     options:{
       option1:"esta es la respuesta 1?",
       option2:"esta es la respuesta 2?",
@@ -26,16 +26,27 @@ const quizs = [
   }
 ]
 
-const view = () =>{
+const view = (id = 0) =>{
   let answer = document.getElementById("answer")
-  let quiz = quizs[0]
-  let label = document.createElement("label")
-  label.classList = "p-2 m-2"
+  let question = document.querySelector(".quiz h3")
+  let quiz = quizs[id]
+  question.innerText = `${quiz.question}`
+  answer.innerHTML = `<input type="hidden" id="${id}>"`
   for(const option in quiz.options){
-      label.innerText = option
+    let label = document.createElement("label")
+    label.innerHTML = `<input type="radio" name="answer" value="${quiz.options[option]}"> ${quiz.options[option]}`
+    label.classList = "p-2 m-2"
+    answer.append(label)
   }
-  answer.append(label)
-
-
 }
 view()
+
+const next = () => {
+  const next = document.getElementById("next")
+  next.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    let answer = e.target[0].
+    console.log(answer)
+  })
+}
+next()
