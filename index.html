@@ -9,10 +9,35 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <nav>
+    <header class="p-3 d-flex justify-content-between align-items-center">
       <h1>JS Quiz</h1>
       <h2>Total Questions: 25</h2>
-    </nav>
+    </header>
+    <main>
+      <form class="quiz d-flex flex-column ">
+        <h3 class="p-3">1) esta es una Pregunta para la quiz ?</h3>
+        <label class="p-2 m-2">
+          <input type="radio">
+          Esta es una posible respuesta
+        </label>
+        <label class="p-2 m-2">
+          <input type="radio">
+          Esta es una posible respuesta
+        </label>
+        <label class="p-2 m-2">
+          <input type="radio">
+          Esta es una posible respuesta
+        </label>
+        <label class="p-2 m-2">
+          <input type="radio">
+          Esta es una posible respuesta
+        </label>
+        <div class="d-flex justify-content-around mt-3">
+          <button class="btn btn-primary">Previus</button>
+          <button class="btn btn-primary">Next</button> 
+        </div>
+      </form>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
   </body>

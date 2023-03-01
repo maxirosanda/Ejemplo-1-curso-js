@@ -3,11 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
-nav{
-  background-color:red ;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+.row{
+  margin: 0;
+  padding: 0;
 }
-
+header{
+  background-color:red ;
+  color: white;
+}
+.quiz{
+  width: 400px;
+}
+.quiz label{
+  background-color:rgb(43, 43, 134) ;
+  border-radius: 5px;
+  color: white;
+}
+.quiz button{
+  width: 100px;
+}
