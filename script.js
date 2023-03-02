@@ -71,7 +71,7 @@ const quizs = [
 
 const view = (id = 0) =>{
   if(id == (quizs.length)){
-    location.href == "./solucion.html"
+    document.location = "./solucion.html"
     return
   }
   const next = document.getElementById("next")
