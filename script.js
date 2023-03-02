@@ -84,22 +84,7 @@ const view = (id = 0) =>{
     answer.append(label)
   }
   previus.elements[0].value = id
-  if(id == 0){
-    const button = document.createElement("button")
-    button.classList = "btn btn-primary"
-    button.innerText= "Next"
-    button.type = "submit"
-    button
-    next.append(button)
-  }else if(id == quizs.length){
-    const button = document.createElement("button")
-    button.classList = "btn btn-primary"
-    button.innerText= "Next"
-    button.type = "submit"
-    button
-    previus.append(button)
-  }
-}  
+}
     
 
 const next = () => {
