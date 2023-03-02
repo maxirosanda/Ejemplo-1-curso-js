@@ -70,6 +70,10 @@ const quizs = [
 ]
 
 const view = (id = 0) =>{
+  if(id == (quizs.length)){
+    location.href == "./solucion.html"
+    return
+  }
   const next = document.getElementById("next")
   let answer = document.getElementById("answer")
   let previus = document.getElementById("previus")
