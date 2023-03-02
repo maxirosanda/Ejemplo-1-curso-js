@@ -66,9 +66,31 @@ const quizs = [
     answerCorrect:"esta es la respuesta 1",
     answer:"",
     score:0
+  },
+  {
+    id:3,
+    question:"esta es una pregunta para la quiz?",
+    options:{
+      option1:{
+        answer:"esta es la respuesta 1",
+        checked:""
+      },
+      option2:{
+        answer:"esta es la respuesta 2",
+        checked:""
+      },
+      option3:{
+        answer:"esta es la respuesta 3",
+        checked:""
+      },
+    },
+    answerCorrect:"esta es la respuesta 1",
+    answer:"",
+    score:0
   }
 ]
-
+const questions = document.getElementById("questions")
+questions.innerText=`Total Questions: ${quizs.length}`
 const view = (id = 0) =>{
 
   const viewQuizs = document.getElementById("viewQuizs")
