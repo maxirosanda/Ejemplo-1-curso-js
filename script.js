@@ -89,8 +89,12 @@ const quizs = [
     score:0
   }
 ]
-const questions = document.getElementById("questions")
-questions.innerText=`Total Questions: ${quizs.length}`
+
+const title = ()=>{
+  const questions = document.getElementById("questions")
+  questions.innerText=`Total Questions: ${quizs.length}`
+}
+
 const view = (id = 0) =>{
 
   const viewQuizs = document.getElementById("viewQuizs")
@@ -158,7 +162,7 @@ const previus = () => {
 
   })
 }
-
+title()
 view()
 next()
 previus()
