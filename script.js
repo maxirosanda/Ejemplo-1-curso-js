@@ -109,13 +109,14 @@ const view = (id = 0) =>{
     viewQuizs.style.display = "none"
     const main = document.getElementById("main")
     let table = document.createElement("table")
+    table.classList = "m-4"
     quizs.forEach( (quiz)=> { 
       const tr = document.createElement("tr")
       tr.innerHTML = `
-        <th>${quiz.id+ 1}</th>
-        <td>Pregunta: ${quiz.question}</td>
-        <td>Respuesta: ${quiz.answer}
-        <td>${quiz.score ==1?"Correcta" :"incorrecta"}</td>
+        <th class="p-3">${quiz.id+ 1}</th>
+        <td class="p-3">Pregunta: ${quiz.question}</td>
+        <td class="p-3">Respuesta: ${quiz.answer}
+        <td class="p-3">${quiz.score ==1?"Correcta" :"incorrecta"}</td>
       `
       table.append(tr)
   } )
