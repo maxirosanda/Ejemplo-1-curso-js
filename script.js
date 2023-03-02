@@ -23,7 +23,7 @@ const quizs = [
   },
   {
     id:1,
-    question:"esta es una pregunta para la quiz?",
+    question:"esta es una pregunta para la quiz?2",
     options:{
       option1:{
         answer:"esta es la respuesta 1",
@@ -48,7 +48,7 @@ const quizs = [
   },
   {
     id:2,
-    question:"esta es una pregunta para la quiz?",
+    question:"esta es una pregunta para la quiz?3",
     options:{
       option1:{
         answer:"esta es la respuesta 1",
@@ -69,7 +69,7 @@ const quizs = [
   },
   {
     id:3,
-    question:"esta es una pregunta para la quiz?",
+    question:"esta es una pregunta para la quiz?4",
     options:{
       option1:{
         answer:"esta es la respuesta 1",
