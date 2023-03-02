@@ -70,6 +70,7 @@ const quizs = [
 ]
 
 const view = (id = 0) =>{
+  const next = document.getElementById("next")
   let answer = document.getElementById("answer")
   let previus = document.getElementById("previus")
   let question = document.querySelector(".quiz h3")
@@ -83,9 +84,23 @@ const view = (id = 0) =>{
     answer.append(label)
   }
   previus.elements[0].value = id
+  if(id == 0){
+    const button = document.createElement("button")
+    button.classList = "btn btn-primary"
+    button.innerText= "Next"
+    button.type = "submit"
+    button
+    next.append(button)
+  }else if(id == quizs.length){
+    const button = document.createElement("button")
+    button.classList = "btn btn-primary"
+    button.innerText= "Next"
+    button.type = "submit"
+    button
+    previus.append(button)
+  }
 }  
     
-view()
 
 const next = () => {
   const next = document.getElementById("next")
@@ -109,11 +124,12 @@ const previus = () => {
   previus.addEventListener("submit",(e)=>{
     e.preventDefault()
     let id = e.target[0].value
+    id--
     view(id)
 
   })
 }
 
-
+view()
 next()
 previus()
