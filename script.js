@@ -70,17 +70,32 @@ const quizs = [
 ]
 
 const view = (id = 0) =>{
-  if(id == (quizs.length)){
-    const viewQuizs = document.getElementById("viewQuizs")
-    viewQuizs.style.display = "none"
-    return
-  }
+
+  const viewQuizs = document.getElementById("viewQuizs")
   const next = document.getElementById("next")
   let answer = document.getElementById("answer")
   let previus = document.getElementById("previus")
   let question = document.querySelector(".quiz h3")
   const buttonPrevius = document.getElementById("buttonPrevius")
   let quiz = quizs[id]
+
+  if(id == (quizs.length)){
+    viewQuizs.style.display = "none"
+    const main = document.getElementById("main")
+    let table = document.createElement("table")
+    quizs.forEach( (quiz)=> { 
+      const tr = document.createElement("tr")
+      tr.innerHTML = `
+        <th>${quiz.id+ 1}</th>
+        <td>Pregunta: ${quiz.question}</td>
+        <td>Respuesta: ${quiz.answer}
+        <td>${quiz.score ==1?"Correcta" :"incorrecta"}</td>
+      `
+      table.append(tr)
+  } )
+    main.append(table)
+    return
+  }
   question.innerText = `${quiz.question}`
   answer.innerHTML = `<input type="hidden" name"id-answer" value="${id}">`
   for(const option in quiz.options){
@@ -101,13 +116,13 @@ const next = () => {
     let answer = e.target["answer"].value
     let id = e.target[0].value
     quizs[id].answerCorrect == answer ? quizs[id].score = 1: false
+    quizs[id].answer = answer
     for(const option in quizs[id].options){
       console.log(typeof option)
       answer == quizs[id].options[option].answer ? quizs[id].options[option].checked= "checked": false
     }
     id++
     view(id)
-    console.log(quizs)
   })
 }
 

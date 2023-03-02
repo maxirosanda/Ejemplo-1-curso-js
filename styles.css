@@ -22,3 +22,17 @@ header{
 .quiz button{
   width: 100px;
 }
+
+table{
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  margin: 20px;
+  background-color:rgb(43, 43, 134);
+  color: white;
+  border-radius: 5px;
+
+}
+table td,table th {
+  padding: 10px;
+  border: 1px solid;
+}
