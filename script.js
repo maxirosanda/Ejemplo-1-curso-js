@@ -71,13 +71,15 @@ const quizs = [
 
 const view = (id = 0) =>{
   if(id == (quizs.length)){
-    document.location = "./solucion.html"
+    const viewQuizs = document.getElementById("viewQuizs")
+    viewQuizs.style.display = "none"
     return
   }
   const next = document.getElementById("next")
   let answer = document.getElementById("answer")
   let previus = document.getElementById("previus")
   let question = document.querySelector(".quiz h3")
+  const buttonPrevius = document.getElementById("buttonPrevius")
   let quiz = quizs[id]
   question.innerText = `${quiz.question}`
   answer.innerHTML = `<input type="hidden" name"id-answer" value="${id}">`
@@ -88,6 +90,7 @@ const view = (id = 0) =>{
     answer.append(label)
   }
   previus.elements[0].value = id
+  id == 0 ? buttonPrevius.disabled = true : buttonPrevius.disabled = false
 }
     
 
